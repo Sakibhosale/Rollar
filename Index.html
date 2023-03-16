@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rollar </title>
+ <style>
+    body{
+        background-color: #ffcc99;
+    }
+    .dice-roller-container{
+       background-color: white;
+       height: 150px;
+       width: 100px;
+       display: block;
+       margin: 10px auto;
+       border: 5px double black;
+       padding: 15px;
+       border-radius: 20px;
+    }
+    .dice{
+        height: 60px;
+        display: block;
+        margin: 10px auto;
+    }
+    .dice-text{
+        text-align: center;
+    }
+    .btn-roll{
+        background-color: tomato;
+        color: aliceblue;
+        display: block;
+        margin: 10px auto;
+        padding: 2px 15px;
+        border-radius: 10px;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    .btn-roll:hover{
+        box-shadow: 2px 2px 3px 2px #c2c2d6;
+    }
+ </style>
+</head>
+
+<body>
+     <div class="dice-roller-container">
+       <img src="dice.png" class="dice" id="dice"/>
+
+       <h3 class="dice-text" id="dice-text">0</h3>
+
+       <button class="btn-roll" onclick="roll()">Roll🎲</button>
+     </div>
+
+    <script>
+        function roll(){
+        const min = 1;
+        const max = 6;
+        const number = Math.floor(Math.random() * (max - min + 1)) + min;
+        const diceTxt = document.getElementById("text").innerHtml = number;
+
+        const diceImg = document.getElementById("dice");
+
+        if(number==1)
+       {
+        diceImg.src ="./dice.png";
+        diceTxt.innerHtml = "1"
+       }
+       else if(number==2)
+       {
+       diceImg.src ="./dice(2).png";
+       diceTxt.innerHtml = "2"
+       }
+       else if(number==3)
+       {
+       diceImg.src ="./dice(3).png";
+       diceTxt.innerHtml = "3"
+       }
+       else if(number==4)
+       {
+        diceImg.src ="./dice(4).png";
+        diceTxt.innerHtml = "4"
+       }
+       else if(number==5)
+       {
+        diceImg.src ="./dice(5).png";
+        diceTxt.innerHtml = "5"
+       }
+       else(number==6)
+       {
+        diceImg.src ="./dice(1).png";
+        diceTxt.innerHtml = "6"
+       }
+    }
+    </script>
+        
+</body>
+</html>
