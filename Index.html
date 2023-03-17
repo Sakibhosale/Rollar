@@ -42,9 +42,9 @@
 
 <body>
      <div class="dice-roller-container">
-       <img src="dice.png" class="dice" id="dice"/>
+       <img src="one.png" class="dice" id="dice"/>
 
-       <h3 class="dice-text" id="dice-text">0</h3>
+       <h3 class="dice-text" id="dice-text">1</h3>
 
        <button class="btn-roll" onclick="roll()">Roll🎲</button>
      </div>
@@ -53,43 +53,48 @@
         function roll(){
         const min = 1;
         const max = 6;
-        const number = Math.floor(Math.random() * (max - min + 1)) + min;
-        const diceTxt = document.getElementById("text").innerHtml = number;
+        const num = Math.floor(Math.random() * (max - min + 1)) + min;
+        document.getElementById("dice-text").innerHTML = num;
 
         const diceImg = document.getElementById("dice");
-
-        if(number==1)
+        console.log(num==1);
+        console.log(num==2);
+        console.log(num==3);
+        console.log(num==4);
+        console.log(num==5);
+        console.log(num==6);
+        
+        if(num==1)
        {
-        diceImg.src ="./dice.png";
-        diceTxt.innerHtml = "1"
+        diceImg.src ="./one.png";
+       
        }
-       else if(number==2)
+       else if(num==2)
        {
-       diceImg.src ="./dice(2).png";
-       diceTxt.innerHtml = "2"
+       diceImg.src ="./two.png";
+       
        }
-       else if(number==3)
+       else if(num==3)
        {
-       diceImg.src ="./dice(3).png";
-       diceTxt.innerHtml = "3"
+       diceImg.src ="./three.png";
+       
        }
-       else if(number==4)
+       else if(num==4)
        {
-        diceImg.src ="./dice(4).png";
-        diceTxt.innerHtml = "4"
+        diceImg.src ="./four.png";
+        
        }
-       else if(number==5)
+       else if(num==5)
        {
-        diceImg.src ="./dice(5).png";
-        diceTxt.innerHtml = "5"
+        diceImg.src ="./five.png";
+        
        }
-       else(number==6)
+       else(num==6)
        {
-        diceImg.src ="./dice(1).png";
-        diceTxt.innerHtml = "6"
+        diceImg.src ="./six.png";
        }
     }
     </script>
-        
+    
 </body>
 </html>
